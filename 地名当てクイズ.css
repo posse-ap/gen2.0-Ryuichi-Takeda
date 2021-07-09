@@ -1,0 +1,20 @@
+.question1 {
+    display: inline-block;
+    border-bottom: solid  yellow;
+}
+.image{
+   display: block;
+}
+
+.choice { 
+    width: 50%;
+    margin: 10px 0;
+    display: block;
+    background-color: white;
+    border: 1px solid gray;
+    text-align: left;
+
+
+   
+}
+
