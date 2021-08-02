@@ -1,20 +1,44 @@
-.question1 {
+.question {
     display: inline-block;
     border-bottom: solid  yellow;
 }
-.image{
-   display: block;
-}
-
 .choice { 
-    width: 50%;
-    margin: 10px 0;
+    font-weight: 600;
+    border-style: solid;
+    border-color: #ebebeb;
+    width: 40%;
     display: block;
-    background-color: white;
-    border: 1px solid gray;
-    text-align: left;
-
-
-   
+    border: 1px solid #ebebeb;
+    padding: 13px;
+    margin: 10px 0;
+    cursor: pointer;
+    box-shadow: 0 3px 2px -2px rgb(0 0 0 / 13%);
 }
+.resultBox{
+    width: 50%;  
+    margin: 10px 0; 
+    padding: 17px;
+    border-radius: 3px;
+    display: none;
+}
+.correct{
+    display: inline-block;
+    border-bottom: solid blue;
+    display: none;
+}
+.incorrect{
+    display: inline-block;
+    border-bottom: solid red;
+    display: none;
+}
+.questionBox{
+    display: block;
+}
+.click-block{
+    pointer-events: none;
+}
+
+
+
+
 
