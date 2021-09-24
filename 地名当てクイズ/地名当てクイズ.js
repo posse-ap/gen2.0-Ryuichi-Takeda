@@ -60,7 +60,7 @@ for (let i = 0; i < images.length; i++) {
     document.write(quizySet);
 
     document.getElementById(`choice${i}-0`).addEventListener('click', () => {
-        document.getElementById(`choice${i}-0`).style.background = 'blue';
+        document.getElementById(`choice${i}-0`).style.background = '#287dff';
         document.getElementById(`choice${i}-0`).style.color = 'white';
         document.getElementById(`correctResultBox${i}`).style.display = "block";
         document.getElementById(`correct${i}`).style.display = "block";
@@ -68,24 +68,24 @@ for (let i = 0; i < images.length; i++) {
         document.getElementById(`choice${i}-2`).classList.add("click-block");
     })
     document.getElementById(`choice${i}-1`).addEventListener('click', () => {
-        document.getElementById(`choice${i}-0`).style.background = 'blue';
+        document.getElementById(`choice${i}-0`).style.background = '#287dff';
         document.getElementById(`choice${i}-0`).style.color = 'white';
         document.getElementById(`incorrectResultBox${i}`).style.display = "block";
         document.getElementById(`incorrect${i}`).style.display = "block";
-        document.getElementById(`choice${i}-1`).style.background = 'red';
+        document.getElementById(`choice${i}-1`).style.background = '#ff5128';
         document.getElementById(`choice${i}-1`).style.color = 'white';
         document.getElementById(`choice${i}-0`).classList.add("click-block");
         document.getElementById(`choice${i}-2`).classList.add("click-block");
     })
     document.getElementById(`choice${i}-2`).addEventListener('click', () => {
-        document.getElementById(`choice${i}-0`).style.background = 'blue';
+        document.getElementById(`choice${i}-0`).style.background = '#287dff';
         document.getElementById(`choice${i}-0`).style.color = 'white';
         document.getElementById(`incorrectResultBox${i}`).style.display = "block";
         document.getElementById(`incorrect${i}`).style.display = "block";
-        document.getElementById(`choice${i}-2`).style.background = 'red';
+        document.getElementById(`choice${i}-2`).style.background = '#ff5128';
         document.getElementById(`choice${i}-2`).style.color = 'white';
         document.getElementById(`choice${i}-0`).classList.add("click-block");
-        document.getElementById(`choice${1}-1`).classList.add("click-block");
+        document.getElementById(`choice${i}-1`).classList.add("click-block");
     })
 }
 

@@ -1,40 +1,30 @@
-.container{
-    /* text-align: center; */
+body {
+    margin: 0 auto;
+    width: 570px;
+    margin-top: 90px;
+    margin-bottom: 90px;
     
-    width: 30%;
-    margin: auto;
-}
+  }
 .question {
     display: inline-block;
     border-bottom: solid  yellow;
+    border-width: 4px;
 }
 .choice { 
     font-weight: 600;
     border-style: solid;
     border-color: #ebebeb;
-    width: 40%;
     display: block;
-    border: 1px solid #ebebeb;
     padding: 13px;
     margin: 10px 0;
     cursor: pointer;
-    box-shadow: 0 3px 2px -2px rgb(0 0 0 / 13%);
+    border: solid 1px #d3d3d3;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.2);
 }
 .resultBox{
-    width: 50%;  
-    margin: 10px 0; 
-    padding: 17px;
-    border-radius: 3px;
-    display: none;
-}
-.correct{
-    display: inline-block;
-    border-bottom: solid blue;
-    display: none;
-}
-.incorrect{
-    display: inline-block;
-    border-bottom: solid red;
+    /* border-radius: 30px;  */
+    border: solid 1px #d3d3d3;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.2);
     display: none;
 }
 .questionBox{
@@ -43,6 +33,45 @@
 .click-block{
     pointer-events: none;
 }
+.correct {
+    display: inline-block;
+    position: relative;
+  }
+.correct:before {
+    content: '';
+    position: absolute;
+    left: 4%;
+    bottom: -2px; /*下線の上下位置調整*/
+    display: inline-block;
+    width: 50px; /*下線の幅*/
+    height: 2px; /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%); /*位置調整*/
+    background-color: #08b3f0; /*下線の色*/
+  }
+.incorrect {
+    display: inline-block;
+    position: relative;
+  }
+.incorrect:before {
+    content: '';
+    position: absolute;
+    left: 5.5%;
+    bottom: -2px; /*下線の上下位置調整*/
+    display: inline-block;
+    width: 63px; /*下線の幅*/
+    height: 2px; /*下線の太さ*/
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%); /*位置調整*/
+    background-color: #fd6647; /*下線の色*/
+  }
+
+
+
 
 
 
