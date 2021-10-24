@@ -1,0 +1,47 @@
+body{
+    background-color: gray;
+}
+
+/*==========================================================================
+# header
+========================================================================== */
+
+
+header {
+  height: 64px;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+}
+
+.posseLogo{
+    height: 100%;
+}
+
+
+.header_inner {
+  display: flex;
+  width: 100%;
+} 
+
+header nav {
+  width: 100%;
+}
+
+/* .header_nav_item + .header_nav_item {
+  margin-left: 40px;
+} */
+
+.report {
+  vertical-align: middle;
+  float: right;
+  display: flex;
+  border: blue;
+}
+
+/*==========================================================================
+# graph
+========================================================================== */
+.graphs{
+    display: flex;
+}
