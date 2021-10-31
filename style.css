@@ -1,5 +1,6 @@
 body{
-    background-color: gray;
+  display: inline-block;
+    background-color: #245,245,248;
 }
 
 /*==========================================================================
@@ -15,7 +16,7 @@ header {
 }
 
 .posseLogo{
-    height: 100%;
+    height: 64px;
 }
 
 
@@ -32,16 +33,225 @@ header nav {
   margin-left: 40px;
 } */
 
-.report {
+.report_and_posting {
+  border-radius: 20px;
   vertical-align: middle;
   float: right;
   display: flex;
-  border: blue;
+  background-color: orchid;
+  width: 200px;
+  margin-right: 2.5%;
+  height: 40px;
+  text-align: center;
+  
+
 }
+
+.report_and_posting_text{
+  margin:auto;
+}
+
+
 
 /*==========================================================================
 # graph
 ========================================================================== */
 .graphs{
     display: flex;
+    margin-top: 64px;
+}
+
+        /*==========================================================================
+  # left
+  ========================================================================== */
+  
+  .graphs_left{
+    height: 450px;
+  width: 50%;
+   background-color: rgb(245,245,248);
+  }
+  
+    .study_hour{
+      height: 30%;
+      display: flex;
+      padding-left: 10%;
+      padding-right: 10px;
+      padding-top: 20px;
+      gap: 10px;
+    }
+  
+      .study_hour_card{
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        height: 100%;
+        background-color: white;
+        width: 33.33%;
+        border-radius: 10px;
+      }
+      
+
+    .study_hour_graph{
+      margin-top: 20px;
+      height: 60%;
+      padding-left: 10%;
+      padding-right: 10px;
+    }
+    .study_hour_graph_card{
+      /* height: 100%; */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      background-color: red;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+    }
+      .study_hour_graph_image{
+      width: 80%;
+      }
+  
+  /*==========================================================================
+  # right
+  ========================================================================== */
+  .graphs_right{
+    height: 450px;
+    display: flex;
+    width:50%;
+    background-color: yellow;
+  }
+  
+       .πchart{
+        width: 100%;
+       display: flex;
+       width: 100%;
+       padding-top: 20px;
+       gap: 20px;
+      padding-left: 10px;
+      padding-right: 10%;
+      background-color: blue;
+       
+    }  
+      
+      .πchart_card{
+        height: 100%;
+        background-color: orange;
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .πchart_card_title{
+        padding: 20px;
+      }
+
+        .study_languages_graph_image{
+          width: 100%;
+        }
+
+        .study_contents_graph_image{
+          width: 100%;
+        }
+
+
+
+        .date{
+          text-align: center;
+        }
+
+
+/*==========================================================================
+# modal
+========================================================================== */
+/* *{
+  padding: 0;
+  margin: 0;
+} */
+
+/* .modal-open{
+  display: inline-block;
+  background-color: #666;
+  color: #fff;
+  margin: 10px;
+} */
+
+/* .modal-open a{
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+} */
+.modal-open a{
+  /* margin: auto;*/
+  height: 100%;
+  width: 100%; 
+  padding: 5px;
+}
+.modal{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 15%;
+}
+.modal:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+.modal:target{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+.modal .overlay{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+
+.modal-wrapper{
+  /* width: 100%; */
+  /* max-width: 400px;
+  min-width: 300px; */
+  /* height: 100%;
+  max-height: 350px; */
+  width: 900px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* padding-top:15% ; */
+  /* height: 600px; */
+  transform: translate(-50%, -50%);
+}
+.modal-contents{
+  display: flex;
+  padding-top: 15%;
+  padding-bottom: 5%;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.modal-content{
+  margin: 25px;
+  height: 100%;
+}
+.modal-close{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  text-decoration: none;
+}
+.modal_left{
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+}
+.modal_right{
+  background-color: red;
 }

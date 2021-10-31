@@ -1,40 +1,95 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="webapp" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="webapp" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
-</head>
-<body>
-      <!-- /.header ここから -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+  </head>
+  <body>
+    <!-- /.header ここから -->
     <header>
-        <div class="header_inner">
-        <h1><img src="posseLogo.png" alt="POSSE" class="posseLogo"></h1>
+      <div class="header_inner">
+        <h1><img src="posseLogo.png" alt="POSSE" class="posseLogo" /></h1>
         <nav class="header_text_container">
-       <div class="report">記録・投稿</div>
+          <div class="report_and_posting modal-open"><a href="#modal">
+            <div class="report_and_posting_text">
+            記録・投稿
+          </div>
+          </a>
+          </div>
         </nav>
       </div>
     </header>
-      <!-- /.header ここまで -->
+    <!-- /.header ここまで -->
 
-       <!-- /.graph ここから -->
-       <div class="graphs">
-<div class="graphs_left">
-    <div class="today_hour"></div>
-    <div class="month_hour"></div>
-    <div class="total_hour"></div>
-    <div class="study_hour_graph"><img src="" alt=""></div>
-</div>
-<div class="graphs_right">
-    <div class="study_laungages"><img src="" alt=""></div>
-    <div class="study_contents"><img src="" alt=""></div>
-</div>
-</div>
+    <!-- /.graph ここから -->
+    <div class="graphs">
+      <div class="graphs_left">
+        <div class="study_hour">
+          <div class="study_hour_card">today
+            <p>3</p>
+            <p>hour</p>
+          </div>
+          <div class="study_hour_card">month
+            <p>120</p>
+            <p>hour</p>
+          </div>
+          <div class="study_hour_card">total
+            <p>1348</p>
+            <p>hour</p>
+          </div>
+        </div>
+        <div class="study_hour_graph">
+        <div class="study_hour_graph_card">
+          <img
+            src="https://th.bing.com/th/id/R.174f2bb03cd5ceed1cc9417b12aae7aa?rik=YioXy85mLbiXUg&riu=http%3a%2f%2fwww.meiji-u.ac.jp%2fmd-medinfo%2ffiles%2fspreadsheet_graph15.png&ehk=NM8%2fV7JxnZURNLsEkBPDloKXosb4XGHbGa9oCiAUoiI%3d&risl=&pid=ImgRaw&r=0"
+            alt=""
+            class="study_hour_graph_image"
+          />
+        </div>
+        </div>
+      </div>
 
-       <!-- /.graph ここまで -->
-    
-</body>
+      <div class="graphs_right">
+        <div class="πchart">
+        <div class="πchart_card">
+          <div class="πchart_card_title">学習コンテンツ</div>
+          <img
+            src="https://lh5.googleusercontent.com/proxy/Suvm4bLGrABL4weSDgSm1uYZoNWqgEHPknadxorIVP2FLplr506uaUNjwTXc5Zfb-r5dFGUxEFksvp7x5LMu9Ak6tgm5zCsdbFUIENQHG3hlSbk0oQ=s0-d"
+            alt=""
+            class="study_languages_graph_image"
+          />
+        </div>
+        <div class="πchart_card">
+          <div class="πchart_card_title">学習言語</div>
+          <img
+            src="https://lh5.googleusercontent.com/proxy/Suvm4bLGrABL4weSDgSm1uYZoNWqgEHPknadxorIVP2FLplr506uaUNjwTXc5Zfb-r5dFGUxEFksvp7x5LMu9Ak6tgm5zCsdbFUIENQHG3hlSbk0oQ=s0-d"
+            alt=""
+            class="study_contents_graph_image"
+          />
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.graph ここまで -->
+    <div class="date">2020年10月</div>
+
+    <!-- /.modal ここから -->
+   
+
+    <div class="modal" id="modal">
+      <a href="#!" class="overlay"></a>
+      <div class="modal-wrapper">
+        <div class="modal-contents">
+          <a href="#!" class="modal-close">✕</a>
+          <div class="modal_left"></div>
+          <div class="modal_right"></div>
+        </div>
+      </div>
+    </div>
+    <!-- /.modal ここまで -->
+  </body>
 </html>
