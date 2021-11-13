@@ -5,7 +5,7 @@ const calendar_container_content =  document.getElementById('calendar_container_
 const modal_contents =  document.getElementById('modal_contents')
 const modal_wrapper =  document.getElementById('modal_wrapper')
 
-// 
+
 
 // calendar_container_content.style.display="none";
 
