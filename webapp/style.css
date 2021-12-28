@@ -1,0 +1,412 @@
+body{
+  display: inline-block;
+    background-color: #245,245,248;
+}
+
+/*==========================================================================
+# header
+========================================================================== */
+
+
+header {
+  height: 64px;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+}
+
+.posseLogo{
+    height: 64px;
+}
+
+.week_number{
+  background-color: blue;
+  margin-top: 1%;
+}
+
+.header_inner {
+  display: flex;
+  width: 100%;
+} 
+
+header nav {
+  width: 100%;
+}
+
+/* .header_nav_item + .header_nav_item {
+  margin-left: 40px;
+} */
+
+.report_and_posting {
+  background: linear-gradient(90deg, #1D62F0,#05FBFF ) ;
+  border-radius: 20px;
+  vertical-align: middle;
+  float: right;
+  display: flex;
+  /* background-color: orchid; */
+  width: 200px;
+  margin-right: 2.5%;
+  height: 40px;
+  text-align: center;
+  
+
+}
+
+.report_and_posting_text{
+  margin:auto;
+}
+
+
+
+/*==========================================================================
+# graph
+========================================================================== */
+.graphs{
+    display: flex;
+    margin-top: 64px;
+}
+
+        /*==========================================================================
+  # left
+  ========================================================================== */
+  
+  .graphs_left{
+    height: 450px;
+  width: 50%;
+   background-color: rgb(245,245,248);
+  }
+  
+    .study_hour{
+      height: 30%;
+      display: flex;
+      padding-left: 10%;
+      padding-right: 10px;
+      padding-top: 20px;
+      gap: 10px;
+    }
+  
+      .study_hour_card{
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        height: 100%;
+        background-color: white;
+        width: 33.33%;
+        border-radius: 10px;
+      }
+      
+
+    .study_hour_graph{
+      margin-top: 20px;
+      height: 60%;
+      padding-left: 10%;
+      padding-right: 10px;
+    }
+    .study_hour_graph_card{
+      /* height: 100%; */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      background-color: red;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+    }
+      .study_hour_graph_image{
+      width: 80%;
+      }
+  
+  /*==========================================================================
+  # right
+  ========================================================================== */
+  .graphs_right{
+    height: 450px;
+    display: flex;
+    width:50%;
+    background-color: yellow;
+  }
+  
+       .πchart{
+        width: 100%;
+       display: flex;
+       width: 100%;
+       padding-top: 20px;
+       gap: 20px;
+      padding-left: 10px;
+      padding-right: 10%;
+      background-color: blue;
+       
+    }  
+      
+      .πchart_card{
+        height: 100%;
+        background-color: orange;
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .πchart_card_title{
+        padding: 20px;
+      }
+
+        .study_languages_graph_image{
+          width: 100%;
+        }
+
+        .study_contents_graph_image{
+          width: 100%;
+        }
+
+
+
+        .date{
+          text-align: center;
+        }
+
+
+/*==========================================================================
+# modal
+========================================================================== */
+
+.modal-open a{
+  /* margin: auto;*/
+  height: 100%;
+  width: 100%; 
+  padding: 5px;
+}
+.modal{
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 15%;
+}
+.modal:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+.modal:target{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+/* .modal .overlay{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+} */
+
+.modal-wrapper{
+  /* width: 100%; */
+  /* max-width: 400px;
+  min-width: 300px; */
+  /* height: 100%;
+  max-height: 350px; */
+  background-color: blue;
+  width: 900px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* padding-top: 20%; */
+  height: 70%;
+  /* padding-top:15% ; */
+  /* height: 600px; */
+  transform: translate(-50%, -50%);
+}
+.modal-contents{
+  display: flex;
+  /* padding-top: 15%;
+  padding-bottom: 5%; */
+  /* overflow: auto; */
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+/* .modal-content{
+  margin: 25px; 
+  height: 100%;
+} */
+.modal-close{
+   position: absolute; 
+  /* top: 0px;
+  right: 0px;  */
+  text-decoration: none;
+  top: 0%;
+  right: 0%;
+}
+.modal_left{
+  width: 50%;
+  height: 80%;
+  background-color: blue;
+}
+.modal_right{
+  width: 50%;
+  height: 80%;
+  background-color: red;
+}
+
+.study_day_record{
+  width: 374px;
+  height: 40px;
+  background-color: gray;
+  /* margin-top: 20px; */
+  margin-left: 56px;
+  margin-right: 20px;
+  z-index: 10;
+}
+
+.study_hour_record{
+  width: 374px;
+  height: 40px;
+  background-color: gray;
+  /* margin-top: 20px; */
+  margin-right: 56px;
+  margin-left: 20px;
+  z-index: 10;
+}
+
+.Twitter_coment_space{
+  height: 60px;
+  width: 374px;
+  margin-right: 56px;
+  margin-left: 20px;
+  background-color: gray;
+}
+
+.report_and_posting_text_modal{
+  border-radius: 20px;
+  vertical-align: middle;
+  float: right;
+  background-color: orchid;
+  width: 200px;
+  margin-right: 2.5%;
+  height: 40px;
+  text-align: center;
+}
+
+
+
+
+
+/*==========================================================================
+# calender
+========================================================================== */
+
+
+
+.calendar-container-content{
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.calendar-container {
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: #f6f5f4;
+  color: #1a1a1a;
+}
+h1 {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+}
+.calendar {
+  padding: 0 30px 30px 30px;
+}
+table {
+  width: 100%;
+}
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+th {
+  font-weight: normal;
+  font-size: 14px;
+}
+td {
+  font-weight: bold;
+}
+.day *:first-child {
+  color: #ff838b;
+}
+.day *:last-child {
+  color: #6fb5ff;
+}
+
+
+.none{
+  display: none;
+}  
+
+/*==========================================================================
+# checkbox
+========================================================================== */
+
+.circle{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(204, 204, 204);
+  display: inline-block;
+  float: left;
+  }
+
+
+.checkbottun{
+  z-index: 100;
+position: absolute;
+content: '';
+width: 9px;
+height: 6px; 
+border-left: 3px solid white;
+border-bottom: 3px solid white;
+transform: rotate(-45deg);
+top: 20%;
+left: 20%;
+float: left;
+}
+
+
+
+.blue{
+  background-color: rgb(15,113,189);
+}
+
+.checkbottun_text{
+  display: inline-block;
+}
+
+.study_content_check_box{
+  display: inline-block;
+  background-color: rgb(245, 245, 248);
+  margin: 1%;
+}
+.study_language_check_box{
+  display: inline-block;
+  background-color: rgb(245, 245, 248);
+}
+
+.study_content_check_container{
+  padding: 0 20px 0 56px;
+}
+
+.study_language_check_container{
+  padding: 0 20px 0 56px;
+}
+
+.Tweet_check_container{
+  padding-left: 20px;
+}
