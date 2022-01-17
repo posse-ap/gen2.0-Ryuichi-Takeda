@@ -1,41 +1,69 @@
 'use strict'
+const calendar_container_content =  document.getElementById('calendar_container_content');
+const modal_contents =  document.getElementById('modal_contents');
+const modal_wrapper =  document.getElementById('modal_wrapper');
+const report_and_posting2_container =  document.getElementById('report_and_posting2_container');
+const spinner_box =  document.getElementById('spinner_box');
+const circle12 =  document.getElementById('circle12');
+const done =  document.getElementById('done');
 
-const study_day_record =  document.getElementById('study_day_record')
-const calendar_container_content =  document.getElementById('calendar_container_content')
-const modal_contents =  document.getElementById('modal_contents')
-const modal_wrapper =  document.getElementById('modal_wrapper')
+spinner_box.classList.add('none');
+done.classList.add('none');
 
+function tweet(){
+    if(circle12.classList.contains('blue') == true ){
+    var textarea = document.getElementById("textarea");
+    console.log(textarea.value);
+    window.open("https://twitter.com/intent/tweet?text=" + textarea.value);
+}else{
 
+}
+    spinner_box.classList.add('none');
+    done.classList.remove('none');
+}
 
-// calendar_container_content.style.display="none";
+function click(){
+    setTimeout(tweet, 3000);
+}
 
+report_and_posting2_container.addEventListener('click',function (){
+    click();
+});
 
-study_day_record.addEventListener('click', ()=>{
-// calendar_container_content.style.display="block";
-calendar_container_content.classList.remove('none');
-// modal_contents.style.display="none";
+report_and_posting2_container.addEventListener('click', ()=>{
 modal_contents.classList.add('none');
-})
+spinner_box.classList.remove('none');
+report_and_posting2_container.classList.add('none');
+});
 
-for(let i = 1; i < 32; i++){
-document.getElementById(`day${i}`).addEventListener('click', ()=>{
-study_day_record.textContent=("2020"+"年"+"10"+"月"+`${i}`+"日");
-calendar_container_content.classList.add('none');
-modal_contents.classList.remove('none');
-})}
 
+//カレンダー
+var study_day_record = document.getElementById('study_day_record');
+var fp = flatpickr(study_day_record, {
+    enableTime: true,
+    dateFormat: "Y-m-d",// フォーマットの変更
+});
 
 for(let i = 1; i < 13; i++){
 document.getElementById(`circle${i}`).addEventListener('click', ()=>{
-    document.getElementById(`circle${i}`).classList.add('blue')
+    document.getElementById(`circle${i}`).classList.toggle('blue')
 })}
 
 
 
 
 
+// let button =  document.getElementById('button');
 
 
+// function click(){
+//     var textarea = document.getElementById("textarea");
+//     console.log(textarea.value);
+//     window.open("https://twitter.com/intent/tweet?text=" + textarea.value);
+// }
+// button.addEventListener('click',function (){
+//     click();
+// })
 
 
 
