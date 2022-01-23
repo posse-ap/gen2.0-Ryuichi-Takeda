@@ -23,6 +23,7 @@ function tweet(){
 }
 
 function click(){
+    modal_wrapper.classList.add('center');
     setTimeout(tweet, 3000);
 }
 
@@ -48,22 +49,6 @@ for(let i = 1; i < 13; i++){
 document.getElementById(`circle${i}`).addEventListener('click', ()=>{
     document.getElementById(`circle${i}`).classList.toggle('blue')
 })}
-
-
-
-
-
-// let button =  document.getElementById('button');
-
-
-// function click(){
-//     var textarea = document.getElementById("textarea");
-//     console.log(textarea.value);
-//     window.open("https://twitter.com/intent/tweet?text=" + textarea.value);
-// }
-// button.addEventListener('click',function (){
-//     click();
-// })
 
 
 

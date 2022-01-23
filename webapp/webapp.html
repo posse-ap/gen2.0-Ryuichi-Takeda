@@ -80,12 +80,7 @@
      
           <div class="πchart_card">
             <div class="πchart_card_title">学習コンテンツ</div>
-        
-            <!-- <div id="target"></div> -->
-            <!-- <div id="piechart" class="study_languages_graph_image"></div> -->
-            <!-- <div class="doughnut_chart_container"> -->
               <canvas id="doughnut_chart_cv" class="doughnut_chart"></canvas>
-            <!-- </div> -->
           </div>
          
         </div>
@@ -99,7 +94,7 @@
     <div class="modal" id="modal">
       <a href="#!" class="overlay"></a>
       <div class="modal-wrapper" id="modal_wrapper">
-      
+        <a href="#!" class="modal-close">✕</a>
         <div  id="spinner_box">
         <main class="wrapper"> 
           <section class="container" id="spinner_box"> 
@@ -112,12 +107,13 @@
           <div class="done_circle">
               <div
                 type="checkbox"
-                class="checkbottun"
+                class="done_checkbottun"
                 name="study_content"
               ></div>
       </div>
-      <div>記録・投稿 <br>
-          完了しました</div>
+      <div class="done_text">記録・投稿</div>
+      <!-- <br> -->
+    <div>完了しました</div>
       </div> 
         <div class="modal-contents" id="modal_contents">
           <a href="#!" class="modal-close">✕</a>
@@ -277,7 +273,6 @@
                 cols="30"
                 rows="9"
               ></textarea>
-              <!-- <button id="button">入力</button> -->
             </div>
             <div class="Tweet_check_container">
               <div class="Twitter_share_box">

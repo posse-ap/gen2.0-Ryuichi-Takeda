@@ -1,5 +1,4 @@
 body{
-  /* display: inline-block; */
     background-color: #245,245,248;
 }
 
@@ -15,16 +14,10 @@ header {
   position: fixed;
   background-color: #fff;
   width: 100%;
-
 }
 
 .posseLogo{
     height: 64px;
-}
-
-.week_number{
-  background-color: blue;
-  /* margin-top: 1%; */
 }
 
 .header_inner {
@@ -36,23 +29,16 @@ header nav {
   width: 100%;
 }
 
-/* .header_nav_item + .header_nav_item {
-  margin-left: 40px;
-} */
-
 .report_and_posting {
   background: linear-gradient(90deg, #1D62F0,#05FBFF ) ;
   border-radius: 20px;
   vertical-align: middle;
   float: right;
   display: flex;
-  /* background-color: orchid; */
   width: 200px;
   margin-right: 2.5%;
   height: 40px;
   text-align: center;
-  
-
 }
 
 .report_and_posting_text{
@@ -67,10 +53,7 @@ header nav {
 .graphs{
     display: flex;
     padding-top: 64px;
-    /* margin: 64px; */
     width: auto;
-    /* padding: 0px; */
-    /* background-color: black; */
 }
 
         /*==========================================================================
@@ -80,7 +63,6 @@ header nav {
   .graphs_left{
   height: 450px;
   width: 50%;
-  /* background-color: rgb(245,245,248); */
   }
   
     .study_hour{
@@ -100,7 +82,6 @@ header nav {
         border-radius: 10px;
 }
       
-
     .study_hour_graph{
       margin-top: 20px;
       height: 65%;
@@ -110,14 +91,11 @@ header nav {
     .study_hour_graph_card{
       height: 100%; 
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      /* background-color: red; */
       width: 100%;
       border-radius: 10px;
       text-align: center;
     }  
      .bar_chart{
-      /* width: 100%; */
-      /* height: 100%; */
       padding-bottom: 0px;
     }  
   /*==========================================================================
@@ -127,7 +105,6 @@ header nav {
     height: 450px;
     display: flex;
     width:50%;
-    /* background-color: yellow; */
   }
   
        .πchart{
@@ -137,21 +114,14 @@ header nav {
        padding-top: 20px;
        gap: 20px;
       padding-left: 10px;
-      padding-right: 10%;
-      /* background-color: blue; */
-       
+      padding-right: 10%;       
     }  
       
       .πchart_card{
         height: 100%;
-        /* background-color: orange; */
         width: 50%;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      }
-
-      .doughnut_chart_container{
-        /* width: 500px; */
       }
 
       .πchart_card_title{
@@ -182,7 +152,6 @@ header nav {
 ========================================================================== */
 
 .modal-open a{
-  /* margin: auto;*/
   height: 100%;
   width: 100%; 
   padding: 5px;
@@ -206,69 +175,45 @@ header nav {
   visibility: visible;
   transition: opacity 0.5s, visibility 0.5s;
 }
-/* .modal .overlay{
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #000;
-  opacity: 0.7;
-  top: 0;
-  left: 0;
-} */
 
 .modal-wrapper{
-  /* width: 100%; */
-  /* max-width: 400px;
-  min-width: 300px; */
-  /* height: 100%;
-  max-height: 350px; */
-  width: 900px;
-  background-color: #fff;
-  position: absolute;
   top: 50%;
   left: 50%;
-  /* padding-top: 20%; */
   height: 70%;
-  /* padding-top:15% ; */
-  /* height: 600px; */
-  transform: translate(-50%, -50%);
+  width: 900px;
+  background-color: #fff;
   border-radius: 15px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+} 
+
+.center{
+   display: flex; 
+  justify-content: center;
+  align-items: center; 
 }
 
 .modal-contents{
   display: flex;
-  /* padding-top: 15%;
-  padding-bottom: 5%; */
-  /* overflow: auto; */
   width: 100%;
    height: 80%;
   box-sizing: border-box;
   position: relative;
 }
-/* .modal-content{
-  margin: 25px; 
-  height: 100%;
-} */
+
 .modal-close{
-   position: absolute; 
-  /* top: 0px;
-  right: 0px;  */
+  position: absolute; 
   text-decoration: none;
   top: 0%;
   right: 0%;
   margin: 20px 20px 0 0;
-  /* z-index: 10; */
 }
 .modal_left{
   width: 50%;
-  /* height: 80%; */
-  /* background-color: blue; */
 }
 .modal_right{
   width: 50%;
-  /* height: 80%; */
-  /* background-color: red; */
 }
 
 .study_day_record{
@@ -284,7 +229,6 @@ header nav {
   width: 374px;
   height: 40px;
   background-color: rgb(245, 245, 248);
-  /* margin-top: 20px; */
   margin-right: 56px;
   margin-left: 20px;
   z-index: 10;
@@ -309,29 +253,6 @@ header nav {
   text-align: center;
 }
 
-
-
-
-
-/*==========================================================================
-# calender
-========================================================================== */
-
-
-
-/* .calendar-container-content{
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
-.calendar-container {
-  width: 500px;
-  margin: 0 auto;
-  border-radius: 5px;
-  background: #f6f5f4;
-  color: #1a1a1a;
-} */
 h1 {
   height: 15%;
   line-height: 80px;
@@ -339,30 +260,6 @@ h1 {
   font-size: 15px;
   margin: 0;
 }
-/* .calendar {
-  padding: 0 30px 30px 30px;
-}
-table {
-  width: 100%;
-}
-th, td {
-  text-align: center;
-  padding: 10px;
-}
-th {
-  font-weight: normal;
-  font-size: 14px;
-}
-td {
-  font-weight: bold;
-}
-.day *:first-child {
-  color: #ff838b;
-}
-.day *:last-child {
-  color: #6fb5ff;
-} */
-
 
 .none{
   display: none;
@@ -428,23 +325,19 @@ float: left;
   padding-left: 20px;
 }
 
-
- .textarea{
+.textarea{
   width: 100%;
   background-color:rgb(245, 245, 248);
 } 
 
 .text_area_container{
-  /* background-color: yellow; */
-   /* padding:0 20px 0 26px ;  */
-   margin-left: 20px;
-   margin-right: 56px;
+  margin-left: 20px;
+  margin-right: 56px;
 }
 
 .report_and_posting2_container{
   margin: 0 auto;
 } 
-
 
 .report_and_posting2{
     background:linear-gradient(90deg, #1D62F0,#05FBFF ) ;
@@ -484,7 +377,6 @@ float: left;
   min-height: 200px;
   background-color: #fff;
   border-radius: 4px;
-  background-color: red;
 }
 
 .loader-1 {
@@ -510,18 +402,39 @@ float: left;
 # done
 ========================================================================== */
 .done_circle{
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background-color: rgb(197, 227, 96);
-  /* display: inline-block; */
+  margin-bottom: 30px;
   }
 
 .awesome{
+  margin-left: auto;
+  margin-right: auto;
   color: rgb(197, 227, 96);
+  margin-bottom: 8px;
 }
 
-.done{
-  background-color: blue;
+.done_checkbottun{
+  z-index: 100;
+  position: absolute;
+  content: '';
+  width: 27px;
+  height: 18px; 
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(-45deg);
+  top: 20%;
+  left: 20%;
+  float: left;
+}
+
+.done_text{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
