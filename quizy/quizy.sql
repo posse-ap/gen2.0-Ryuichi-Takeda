@@ -44,3 +44,4 @@ INSERT INTO choices(question_id,choice,result) VALUES
     SELECT * FROM prefectures;
     SELECT * FROM questions;
     SELECT * FROM choices;
+-- week26
