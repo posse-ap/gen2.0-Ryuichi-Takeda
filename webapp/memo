@@ -1,0 +1,56 @@
+mysql -u root -p < /docker-entrypoint-initdb.d/init.sql
+// require 'db-connect.php';
+// $stmt=$pdo->prepare("SELECT * from big_questions WHERE id = 1");
+// $stmt->execute();
+// $data=$stmt->fetchAll();
+// print_r('<pre>');
+// print_r($data);
+// print_r('</pre>');
+
+
+
+// $stmt=$pdo->prepare("SELECT * from questions WHERE big_question_id = 1");
+// $stmt->execute();
+// $data=$stmt->fetchAll();
+// print_r('<pre>');
+// print_r($data);
+// print_r('</pre>');
+
+
+// $stmt=$pdo->prepare("SELECT * from choices");
+// $stmt->execute();
+// $data=$stmt->fetchAll();
+// print_r('<pre>');
+// print_r($data);
+// print_r('</pre>');
+
+
+// `<img src =<?php echo $questions_data[i][0]?> class="image">`;
+
+// + `<li class="choice" id = "a"><?php echo $ ?></li>`
+        // + `<li class="choice" id = "b"><?php echo $ ?></li>`
+        // + `<li class="choice" id = "c"><?php echo $ ?></li>`
+
+
+        + `<li class="choice" id = "a"><?php echo $choices_data[$i][0]['region'] ?></li>`;
+
+
+        + `<li class="choice"><?php echo $choices_data_[$i][]['region'] ?></li>`
+        + `<li class="choice"><?php echo $choices_data_[$i][]['region'] ?></li>`;
+
+
+
+        <?php for($j=0; $j < count($choices_data_[$i]); $j++) {?>
+        const choice<?php echo [$i] ?>_<?php echo [$j] ?> = document.getElementById("choice<?php echo $i ?>_<?php echo $j ?>");
+        <?php ;};?>
+
+
+
+
+        // const choice0 = document.querySelectorAll("choice0");
+        // function colorChange(){
+        //     <?php for($j=0; $j < count($choices_data_[$i]); $j++) {?>
+        //     document.getElementById("choice<?php echo $i ?>_<?php echo $j ?>").style.background='red';
+        //     // this.style.background='blue';
+        //     <?php };?>
+        // }
