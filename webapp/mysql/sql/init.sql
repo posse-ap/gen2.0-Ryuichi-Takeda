@@ -57,66 +57,37 @@ INSERT INTO posts VALUES
     (9,'',4,6,3);
 
 
-DROP TABLE IF EXISTS contents;
-CREATE TABLE contents (
+DROP TABLE IF EXISTS studies;
+CREATE TABLE studies (
     id INT,
-    content VARCHAR(140),
-    content_color VARCHAR(140)
-    -- post_id INT
-    -- hour INT
+    study VARCHAR(140),
+    color VARCHAR(140),
+    language_or_content VARCHAR(140)
 );
 
-
-INSERT INTO contents VALUES
-(1,'N予備校','rgb(0,66,229)'),
-(2,'ドットインストール','rgb(0,112,185)'),
-(3,'POSSE課題','rgb(0,189,219)'),
-(4,'その他','rgb(8,205,250)');
-
-
-DROP TABLE IF EXISTS languages;
-CREATE TABLE languages (
-    id INT,
-    language VARCHAR(140),
-    language_color VARCHAR(140)
-);
-
-INSERT INTO languages VALUES
-(1,'html','rgb(0,66,229)'),
-(2,'css','rgb(0,112,185)'),
-(3,'js','rgb(0,189,219)'),
-(4,'PHP','rgb(8,205,250)'),
-(5,'Laravel','rgb(203,173,240)'),
-(6,'SQL','rgb(108,67,229)'),
-(7,'SHELL','rgb(70,9,232)'),
-(8,'その他','rgb(45,0,186)');
+INSERT INTO studies VALUES
+(1,'html','rgb(0,66,229)','language'),
+(2,'css','rgb(0,112,185)','language'),
+(3,'js','rgb(0,189,219)','language'),
+(4,'PHP','rgb(8,205,250)','language'),
+(5,'Laravel','rgb(203,173,240)','language'),
+(6,'SQL','rgb(108,67,229)','language'),
+(7,'SHELL','rgb(70,9,232)','language'),
+(8,'その他','rgb(45,0,186)','language'),
+(9,'N予備校','rgb(0,66,229)','content'),
+(10,'ドットインストール','rgb(0,112,185)','content'),
+(11,'POSSE課題','rgb(0,189,219)','content'),
+(12,'その他','rgb(8,205,250)','content');
 
 
-DROP TABLE IF EXISTS posts_contents_connect;
-CREATE TABLE posts_contents_connect (
+
+
+DROP TABLE IF EXISTS posts_studies_connect;
+CREATE TABLE posts_studies_connect (
     post_id INT,
-    content_id INT
+    study_id INT
 );
-
-INSERT INTO posts_contents_connect VALUES
-(1,3),
-(2,2),
-(2,2),
-(3,1),
-(4,3),
-(5,1),
-(5,3),
-(6,2),
-(7,2),
-(8,2),
-(9,2);
-
-DROP TABLE IF EXISTS posts_languages_connect;
-CREATE TABLE posts_languages_connect (
-    post_id INT,
-    language_id INT
-);
-INSERT INTO posts_languages_connect VALUES
+INSERT INTO posts_studies_connect VALUES
 (1,3),
 (2,1),
 (2,2),
@@ -133,7 +104,23 @@ INSERT INTO posts_languages_connect VALUES
 (8,4),
 (8,6),
 (9,4),
-(9,6);
+(9,6),
+
+
+
+(1,11),
+(2,10),
+(2,10),
+(3,9),
+(4,11),
+(5,9),
+(5,11),
+(6,10),
+(7,10),
+(8,10),
+(9,10);
+
+
 
 
 DROP TABLE IF EXISTS dates_posts_mix;
@@ -149,35 +136,22 @@ SELECT
 
 
 
-DROP TABLE IF EXISTS posts_languages_mix;
-CREATE table posts_languages_mix  AS  
+DROP TABLE IF EXISTS posts_studies_mix;
+CREATE table posts_studies_mix  AS  
 SELECT 
 post_id,
 hour,
 comment,
 date_id,
 user_id,
-language,
-languages.id AS language_id
-    FROM  posts_languages_connect join posts on posts.id=post_id
-    RIGHT join languages
-    ON languages.id=language_id;
+study,
+studies.id AS study_id,
+language_or_content
+    FROM  posts_studies_connect join posts on post_id=posts.id
+    RIGHT join studies
+    ON studies.id=study_id;
 
 
-
-DROP TABLE IF EXISTS posts_contents_mix;
-CREATE table posts_contents_mix  AS  
-SELECT 
-post_id,
-hour,
-comment,
-date_id,
-user_id,
-content,
-contents.id AS content_id
-    FROM  posts_contents_connect join posts on posts.id=post_id
-    RIGHT join contents
-    ON contents.id=content_id;
 
 
 
