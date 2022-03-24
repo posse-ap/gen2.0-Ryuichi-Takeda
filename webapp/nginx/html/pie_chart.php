@@ -48,7 +48,7 @@
                     datasets: [{
                         label: "Sample",
                         backgroundColor: [
-                            <?php  for($j=0;$j<=7;$j++){?>
+                            <?php  for($j=0;$j<=$language_length_data[0]['count(language)']-1;$j++){?>
                         '<?php echo  $language_color_data[$j]['language_color']; ?>',
                     <?php } ?>
                             
@@ -67,7 +67,7 @@
                         // data:[
 
                         data: [
-                            <?php  for($j=1;$j<=8;$j++){?>
+                            <?php  for($j=1;$j<=$language_length_data[0]['count(language)'];$j++){?>
                         <?php  echo round($languages_hour_[$j],1); ?>,
                     <?php } ?>
                         ],
@@ -149,12 +149,12 @@
             datasets: [{
                 label: "Sample",
                 backgroundColor: [
-                    <?php  for($j=0;$j<=4;$j++){?>
+                    <?php  for($j=0;$j<= $content_length_data[0]['count(content)']-1;$j++){?>
                         '<?php echo  $language_color_data[$j]['language_color']; ?>',
                     <?php } ?>
                 ],
                 data: [
-                    <?php  for($j=1;$j<=4;$j++){?>
+                    <?php  for($j=1;$j<= $content_length_data[0]['count(content)']-1;$j++){?>
                         <?php echo round($contents_hour_[$j],1); ?>,
                     <?php } ?>
                 ],

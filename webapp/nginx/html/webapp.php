@@ -11,6 +11,7 @@ if (isset($_GET['user'])) {
   $user_id = $_GET['user'];
 }
 
+
 $today = date('Y-m-d');
 $today_year = explode('-', $today)[0];
 $today_month = explode('-', $today)[1];
@@ -81,9 +82,43 @@ for($i=1; $i <= 31;$i++){
   }
   }
 
-for($j = 1; $j <= 8;$j++){
+
+
+
+$language_length_stmt = $pdo->prepare("SELECT count(language) from languages
+-- WHERE post_id = $i
+-- WHERE user_id = ?
+");
+$language_length_stmt->bindValue(1, $user_id);
+$language_length_stmt->execute();
+$language_length_data = $language_length_stmt->fetchAll();
+// print_r($language_number_data);
+// echo $language_length_data[0]['count(language)'];
+
+$content_length_stmt = $pdo->prepare("SELECT count(content) from contents
+-- WHERE post_id = $i
+-- WHERE user_id = ?
+");
+$content_length_stmt->bindValue(1, $user_id);
+$content_length_stmt->execute();
+$content_length_data = $content_length_stmt->fetchAll();
+echo $content_length_data[0]['count(content)'];
+
+
+$post_length_stmt = $pdo->prepare("SELECT count(id) from posts
+-- WHERE post_id = $i
+-- WHERE user_id = ?
+");
+$post_length_stmt->bindValue(1, $user_id);
+$post_length_stmt->execute();
+$post_length_data = $post_length_stmt->fetchAll();
+// print_r($post_length_data);
+  
+
+
+for($j = 1; $j <= $language_length_data[0]['count(language)'];$j++){
   $languages_hour_[$j]=0;
-for($i = 1; $i <= 9;$i++){
+for($i = 1; $i <= $post_length_data[0]['count(id)'];$i++){
 $languages_count_stmt_[$i] = $pdo->prepare("SELECT count(language) from posts_languages_mix
 WHERE post_id = $i
 AND user_id = ?
@@ -110,9 +145,9 @@ $languages_hour_[$j]=$languages_hour_data_[$i][0]['sum(hour)']/$languages_count_
 }
 }
 
-for($j = 1; $j <= 4;$j++){
+for($j = 1; $j <=  $content_length_data[0]['count(content)'];$j++){
   $contents_hour_[$j]=0;
-for($i = 1; $i <= 9;$i++){
+for($i = 1; $i <= $post_length_data[0]['count(id)'];$i++){
 $contents_count_stmt_[$i] = $pdo->prepare("SELECT count(content) from posts_contents_mix
 WHERE post_id = $i
 AND user_id = ?
