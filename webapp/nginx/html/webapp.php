@@ -82,7 +82,7 @@ WHERE language_or_content = 'language'
 $language_length_stmt->execute();
 $language_length_data = $language_length_stmt->fetchAll();
 // print_r($language_number_data);
-echo $language_length_data[0]['count(study)'];
+// echo $language_length_data[0]['count(study)'];
 
 $content_length_stmt = $pdo->prepare("SELECT count(study) from studies
 WHERE language_or_content = 'content'
@@ -107,9 +107,10 @@ $post_length_data = $post_length_stmt->fetchAll();
 for($j = 1; $j <= $language_length_data[0]['count(study)'];$j++){
   $languages_hour_[$j]=0;
 for($i = 1; $i <= $post_length_data[0]['count(id)'];$i++){
-$languages_count_stmt_[$i] = $pdo->prepare("SELECT count(language) from posts_languages_mix
+$languages_count_stmt_[$i] = $pdo->prepare("SELECT count(study) from posts_studies_mix
 WHERE post_id = $i
 AND user_id = ?
+AND language_or_content = 'language'
 ");
 $languages_count_stmt_[$i]->bindValue(1, $user_id);
 $languages_count_stmt_[$i]->execute();
@@ -117,10 +118,11 @@ $languages_count_data_[$i] = $languages_count_stmt_[$i]->fetchAll();
 if ($languages_count_data_[$i][0][0] == 0) {
   $languages_count_data_[$i][0][0] = 1;
 }
-$languages_hour_stmt_[$i] = $pdo->prepare("SELECT sum(hour) from posts_languages_mix
+$languages_hour_stmt_[$i] = $pdo->prepare("SELECT sum(hour) from posts_studies_mix
 WHERE post_id = $i
-AND language_id = $j
+AND study_id = $j
 AND user_id = ?
+AND language_or_content = 'language'
 ");
 $languages_hour_stmt_[$i]->bindValue(1, $user_id);
 $languages_hour_stmt_[$i]->execute();
@@ -133,12 +135,13 @@ $languages_hour_[$j]=$languages_hour_data_[$i][0]['sum(hour)']/$languages_count_
 }
 }
 
-for($j = 1; $j <=  $content_length_data[0]['count(study)'];$j++){
+for($j = $language_length_data[0]['count(study)']+1; $j <=  $content_length_data[0]['count(study)']+ $language_length_data[0]['count(study)'];$j++){
   $contents_hour_[$j]=0;
 for($i = 1; $i <= $post_length_data[0]['count(id)'];$i++){
-$contents_count_stmt_[$i] = $pdo->prepare("SELECT count(study) from posts_contents_mix
+$contents_count_stmt_[$i] = $pdo->prepare("SELECT count(study) from posts_studies_mix
 WHERE post_id = $i
 AND user_id = ?
+AND language_or_content = 'content'
 ");
 $contents_count_stmt_[$i]->bindValue(1, $user_id);
 $contents_count_stmt_[$i]->execute();
@@ -146,10 +149,11 @@ $contents_count_data_[$i] = $contents_count_stmt_[$i]->fetchAll();
 if ($contents_count_data_[$i][0][0] == 0) {
   $contents_count_data_[$i][0][0] = 1;
 }
-$contents_hour_stmt_[$i] = $pdo->prepare("SELECT sum(hour) from posts_contents_mix
+$contents_hour_stmt_[$i] = $pdo->prepare("SELECT sum(hour) from posts_studies_mix
 WHERE post_id = $i
-AND content_id = $j
+AND study_id = $j
 AND user_id = ?
+AND language_or_content = 'content'
 ");
 $contents_hour_stmt_[$i]->bindValue(1, $user_id);
 $contents_hour_stmt_[$i]->execute();
@@ -168,9 +172,10 @@ WHERE language_or_content = 'language'");
 $language_color_stmt->execute();
 // $language_stmt->bindValue(1, $today);
 $language_color_data = $language_color_stmt->fetchAll();
-// for($j=0;$j<=7;$j++){
+// for($j=0;$j<=20;$j++){
 // print('<pre>');
-// print_r($language_color_data[$j]['color']);
+// echo 10000+$j;
+// print_r($contents_hour_[$j]);
 // print('</pre>');
 // }
 

@@ -154,7 +154,7 @@
                     <?php } ?>
                 ],
                 data: [
-                    <?php  for($j=1;$j<= $content_length_data[0]['count(study)']-1;$j++){?>
+                    <?php  for($j=$language_length_data[0]['count(study)']+1;$j<= $content_length_data[0]['count(study)']+$language_length_data[0]['count(study)'];$j++){?>
                         <?php echo round($contents_hour_[$j],1); ?>,
                     <?php } ?>
                 ],
