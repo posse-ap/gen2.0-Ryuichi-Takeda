@@ -1,1 +1,1 @@
-POSSE課題です
+POSSE課題
